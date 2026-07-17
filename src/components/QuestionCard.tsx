@@ -15,11 +15,11 @@ export default function QuestionCard({
 }: Props) {
   return (
     <>
-      <h2 className="text-3xl font-bold text-[#3D2A18]">
+      <h2 className="text-3xl font-bold text-[#2B2118]">
         {question.title}
       </h2>
 
-      <p className="mt-8 text-lg leading-9 text-[#6A5644]">
+      <p className="mt-8 text-lg leading-9 text-[#4B3A2A]">
         {question.scenario}
       </p>
 

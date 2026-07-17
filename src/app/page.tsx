@@ -59,7 +59,7 @@ export default function Home() {
             Leader Inside You
           </h1>
 
-          <p className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-yellow-100">
+          <p className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-white/95">
             Discover the leadership qualities that lie within you through five
             immersive scenarios inspired by India's greatest leaders.
           </p>
@@ -107,7 +107,7 @@ export default function Home() {
 
       {/* Divider */}
 
-      <div className="py-10 text-center text-4xl text-yellow-700">
+      <div className="py-10 text-center text-4xl text-[#8A5A00]">
         ❖
       </div>
 
@@ -117,15 +117,15 @@ export default function Home() {
 
         <div className="mx-auto max-w-6xl">
 
-          <p className="text-center uppercase tracking-[0.35em] text-yellow-700">
+          <p className="text-center uppercase tracking-[0.35em] text-[#8A5A00]">
             About the Assessment
           </p>
 
-          <h2 className="mt-4 text-center text-5xl font-bold text-[#3D2A18]">
+          <h2 className="mt-4 text-center text-5xl font-bold text-[#2B2118]">
             Leadership Lives Within Everyone
           </h2>
 
-          <p className="mx-auto mt-8 max-w-3xl text-center text-lg leading-9 text-[#6A5644]">
+          <p className="mx-auto mt-8 max-w-3xl text-center text-lg leading-9 text-[#4B3A2A]">
             Every decision reflects a leadership quality.
             Through five carefully designed scenarios,
             this assessment compares your responses with
@@ -139,14 +139,14 @@ export default function Home() {
 
               <ScrollText
                 size={50}
-                className="text-yellow-700"
+                className="text-[#8A5A00]"
               />
 
               <h3 className="mt-6 text-2xl font-bold">
                 Five Scenarios
               </h3>
 
-              <p className="mt-4 leading-8 text-[#6A5644]">
+              <p className="mt-4 leading-8 text-[#4B3A2A]">
                 Respond to carefully designed situations
                 that reflect real leadership decisions.
               </p>
@@ -157,14 +157,14 @@ export default function Home() {
 
               <Landmark
                 size={50}
-                className="text-yellow-700"
+                className="text-[#8A5A00]"
               />
 
               <h3 className="mt-6 text-2xl font-bold">
                 Historic Comparison
               </h3>
 
-              <p className="mt-4 leading-8 text-[#6A5644]">
+              <p className="mt-4 leading-8 text-[#4B3A2A]">
                 Discover which Indian leader's qualities
                 most closely align with yours.
               </p>
@@ -175,14 +175,14 @@ export default function Home() {
 
               <FileText
                 size={50}
-                className="text-yellow-700"
+                className="text-[#8A5A00]"
               />
 
               <h3 className="mt-6 text-2xl font-bold">
                 Personalized Report
               </h3>
 
-              <p className="mt-4 leading-8 text-[#6A5644]">
+              <p className="mt-4 leading-8 text-[#4B3A2A]">
                 Instantly receive a beautifully designed
                 compatibility report with downloadable PDF.
               </p>
@@ -201,11 +201,11 @@ export default function Home() {
 
         <div className="mx-auto max-w-5xl">
 
-          <p className="text-center uppercase tracking-[0.4em] text-yellow-700">
+          <p className="text-center uppercase tracking-[0.4em] text-[#8A5A00]">
             Journey Through Time
           </p>
 
-          <h2 className="mt-4 text-center text-5xl font-bold text-[#3D2A18]">
+          <h2 className="mt-4 text-center text-5xl font-bold text-[#2B2118]">
             Inspired Across Centuries
           </h2>
 
@@ -228,7 +228,7 @@ export default function Home() {
 
                   <div className="w-[45%] rounded-2xl bg-white p-6 shadow-xl">
 
-                    <h3 className="text-xl font-bold">
+                    <h3 className="text-xl font-extrabold">
                       {leader}
                     </h3>
 

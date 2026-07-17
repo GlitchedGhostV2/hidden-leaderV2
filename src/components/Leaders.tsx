@@ -51,15 +51,15 @@ export default function Leaders() {
 
       <div className="mx-auto max-w-7xl px-6">
 
-        <p className="text-center uppercase tracking-[0.35em] text-yellow-700">
+        <p className="text-center uppercase tracking-[0.35em] text-[#8A5A00]">
           Inspired By
         </p>
 
-        <h2 className="mt-4 text-center text-5xl font-bold text-[#3D2A18]">
+        <h2 className="mt-4 text-center text-5xl font-bold text-[#2B2118]">
           Legendary Indian Leaders
         </h2>
 
-        <p className="mx-auto mt-6 max-w-3xl text-center text-lg leading-8 text-[#6A5644]">
+        <p className="mx-auto mt-6 max-w-3xl text-center text-lg leading-8 text-[#4B3A2A]">
           This assessment compares your leadership qualities with the values
           commonly associated with some of India's greatest visionaries,
           reformers and warriors.
@@ -87,7 +87,7 @@ export default function Leaders() {
 
               <div className="p-5">
 
-                <h3 className="text-center font-semibold text-[#3D2A18]">
+                <h3 className="text-center font-semibold text-[#2B2118]">
                   {leader.name}
                 </h3>
 

@@ -36,7 +36,7 @@ export default function FinalCTA() {
           Inside You?
         </h2>
 
-        <p className="mt-8 max-w-2xl text-lg leading-9 text-yellow-100">
+        <p className="mt-8 max-w-2xl text-lg leading-9 text-white/95">
           Complete five leadership scenarios and receive your personalized
           compatibility report inspired by India's greatest leaders.
         </p>

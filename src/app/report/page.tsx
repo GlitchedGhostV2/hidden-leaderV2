@@ -144,11 +144,11 @@ export default function ReportPage() {
 
               <div className="mt-8 rounded-2xl bg-white/10 p-6 backdrop-blur">
 
-  <h3 className="text-xl font-bold text-yellow-300">
+  <h3 className="text-xl font-extrabold text-yellow-300">
     {leaderInfo.title}
   </h3>
 
-  <p className="mt-3 leading-8 text-yellow-100">
+  <p className="mt-3 leading-8 text-white/95">
     {leaderInfo.description}
   </p>
 
@@ -167,9 +167,9 @@ export default function ReportPage() {
 
             <div className="mb-10 flex items-center gap-3">
 
-              <TrendingUp className="text-yellow-700" />
+              <TrendingUp className="text-[#8A5A00]" />
 
-              <h2 className="text-3xl font-bold text-[#3D2A18]">
+              <h2 className="text-3xl font-bold text-[#2B2118]">
                 Compatibility Rankings
               </h2>
 
@@ -187,7 +187,7 @@ export default function ReportPage() {
                       {leader.name}
                     </span>
 
-                    <span className="font-bold text-yellow-700">
+                    <span className="font-bold text-[#8A5A00]">
                       {leader.compatibility}%
                     </span>
 
@@ -219,11 +219,11 @@ export default function ReportPage() {
 
   <div className="rounded-3xl bg-white p-10 shadow-xl">
 
-    <h2 className="mb-8 text-3xl font-bold text-[#3D2A18]">
+    <h2 className="mb-8 text-3xl font-bold text-[#2B2118]">
       Leadership Trait Profile
     </h2>
 
-    <p className="mb-10 text-[#6A5644]">
+    <p className="mb-10 text-[#4B3A2A]">
       These scores represent the leadership qualities reflected in your responses.
     </p>
 
@@ -241,7 +241,7 @@ export default function ReportPage() {
   {traitNames[trait] || trait}
 </span>
 
-            <span className="font-bold text-yellow-700">
+            <span className="font-bold text-[#8A5A00]">
               {percentage}%
             </span>
 
@@ -312,11 +312,11 @@ export default function ReportPage() {
 
           <div className="rounded-3xl bg-white p-10 shadow-xl">
 
-            <h2 className="text-2xl font-bold text-[#3D2A18]">
+            <h2 className="text-2xl font-bold text-[#2B2118]">
               Leadership Strengths
             </h2>
 
-            <ul className="mt-6 space-y-4 text-[#6A5644]">
+            <ul className="mt-6 space-y-4 text-[#4B3A2A]">
               {strengths.map((item) => (
                 <li key={item}>✓ {item}</li>
               ))}
@@ -326,11 +326,11 @@ export default function ReportPage() {
 
           <div className="rounded-3xl bg-white p-10 shadow-xl">
 
-            <h2 className="text-2xl font-bold text-[#3D2A18]">
+            <h2 className="text-2xl font-bold text-[#2B2118]">
               Areas for Growth
             </h2>
 
-            <ul className="mt-6 space-y-4 text-[#6A5644]">
+            <ul className="mt-6 space-y-4 text-[#4B3A2A]">
               {growth.map((item) => (
                 <li key={item}>• {item}</li>
               ))}

@@ -38,7 +38,7 @@ export default function Instructions() {
             Welcome
           </h1>
 
-          <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-9 text-yellow-100">
+          <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-9 text-white/95">
             Before beginning your journey, please read the following
             instructions carefully.
           </p>
@@ -58,7 +58,7 @@ export default function Instructions() {
                 5 Minutes
               </h3>
 
-              <p className="mt-4 leading-8 text-gray-200">
+              <p className="mt-4 leading-8 text-[#2B2118]">
                 The assessment contains only five questions and takes
                 less than five minutes.
               </p>
@@ -78,7 +78,7 @@ export default function Instructions() {
                 Answer Honestly
               </h3>
 
-              <p className="mt-4 leading-8 text-gray-200">
+              <p className="mt-4 leading-8 text-[#2B2118]">
                 There are no right or wrong answers.
                 Choose the option that best represents your decision.
               </p>
@@ -98,7 +98,7 @@ export default function Instructions() {
                 Private
               </h3>
 
-              <p className="mt-4 leading-8 text-gray-200">
+              <p className="mt-4 leading-8 text-[#2B2118]">
                 Your responses are not stored.
                 They are used only to generate your report.
               </p>
@@ -119,7 +119,7 @@ export default function Instructions() {
 
               <User
                 size={22}
-                className="absolute left-5 top-1/2 -translate-y-1/2 text-gray-500"
+                className="absolute left-5 top-1/2 -translate-y-1/2 text-[#2B2118]500"
               />
 
               <input

@@ -21,11 +21,11 @@ export default function LoadingReport() {
 
         <div className="mx-auto mb-10 h-24 w-24 animate-spin rounded-full border-8 border-yellow-200 border-t-yellow-700" />
 
-        <h1 className="text-4xl font-bold text-[#3D2A18]">
+        <h1 className="text-4xl font-bold text-[#2B2118]">
           Analyzing Your Leadership...
         </h1>
 
-        <p className="mt-5 text-lg text-[#6A5644]">
+        <p className="mt-5 text-lg text-[#4B3A2A]">
           Comparing your responses with renowned Indian leaders.
         </p>
 

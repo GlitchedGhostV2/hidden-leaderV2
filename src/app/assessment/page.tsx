@@ -54,7 +54,7 @@ function previous() {
       <div className="mx-auto max-w-4xl">
         {/* Progress */}
 
-        <p className="text-lg font-medium text-yellow-700">
+        <p className="text-lg font-medium text-[#8A5A00]">
           Question {current + 1} of {questions.length}
         </p>
 

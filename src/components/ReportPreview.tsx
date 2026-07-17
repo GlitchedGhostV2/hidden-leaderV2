@@ -17,15 +17,15 @@ export default function ReportPreview() {
 
       <div className="relative mx-auto max-w-7xl px-6">
 
-        <p className="text-center uppercase tracking-[0.4em] text-yellow-700">
+        <p className="text-center uppercase tracking-[0.4em] text-[#8A5A00]">
           Your Personalized Report
         </p>
 
-        <h2 className="mt-4 text-center text-5xl font-bold text-[#3D2A18]">
+        <h2 className="mt-4 text-center text-5xl font-bold text-[#2B2118]">
           Discover Your Leadership Legacy
         </h2>
 
-        <p className="mx-auto mt-8 max-w-3xl text-center text-lg leading-9 text-[#6A5644]">
+        <p className="mx-auto mt-8 max-w-3xl text-center text-lg leading-9 text-[#4B3A2A]">
           Once you complete the assessment, you'll receive an instantly
           generated report highlighting your leadership compatibility,
           strengths, and development areas.
@@ -39,7 +39,7 @@ export default function ReportPreview() {
 
             <div className="mb-6 flex items-center gap-3">
 
-              <Medal className="text-yellow-700" size={34} />
+              <Medal className="text-[#8A5A00]" size={34} />
 
               <h3 className="text-2xl font-bold">
                 Sample Report
@@ -113,13 +113,13 @@ export default function ReportPreview() {
 
             <div className="rounded-3xl bg-white p-8 shadow-xl">
 
-              <BarChart3 className="text-yellow-700" size={36} />
+              <BarChart3 className="text-[#8A5A00]" size={36} />
 
               <h3 className="mt-5 text-2xl font-bold">
                 Compatibility Analysis
               </h3>
 
-              <p className="mt-4 leading-8 text-[#6A5644]">
+              <p className="mt-4 leading-8 text-[#4B3A2A]">
                 View your compatibility percentage with each legendary leader.
               </p>
 
@@ -127,13 +127,13 @@ export default function ReportPreview() {
 
             <div className="rounded-3xl bg-white p-8 shadow-xl">
 
-              <Sparkles className="text-yellow-700" size={36} />
+              <Sparkles className="text-[#8A5A00]" size={36} />
 
               <h3 className="mt-5 text-2xl font-bold">
                 Leadership Insights
               </h3>
 
-              <p className="mt-4 leading-8 text-[#6A5644]">
+              <p className="mt-4 leading-8 text-[#4B3A2A]">
                 Understand your strongest qualities and areas for future growth.
               </p>
 
@@ -141,13 +141,13 @@ export default function ReportPreview() {
 
             <div className="rounded-3xl bg-white p-8 shadow-xl">
 
-              <FileDown className="text-yellow-700" size={36} />
+              <FileDown className="text-[#8A5A00]" size={36} />
 
               <h3 className="mt-5 text-2xl font-bold">
                 Download PDF
               </h3>
 
-              <p className="mt-4 leading-8 text-[#6A5644]">
+              <p className="mt-4 leading-8 text-[#4B3A2A]">
                 Save your beautifully designed report instantly as a PDF.
               </p>
 

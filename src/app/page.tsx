@@ -59,14 +59,14 @@ export default function Home() {
             Leader Inside You
           </h1>
 
-          <p className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-white/95">
+          <p className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-white/90">
             Discover the leadership qualities that lie within you through five
             immersive scenarios inspired by India's greatest leaders.
           </p>
 
           <Link
             href="/instructions"
-            className="mt-12 inline-flex items-center gap-3 rounded-full bg-yellow-600 px-8 py-4 text-lg font-semibold text-white transition hover:scale-105 hover:bg-yellow-500"
+            className="mt-12 inline-flex items-center gap-3 rounded-full bg-yellow-600 px-8 py-4 text-lg font-semibold text-black transition hover:scale-105 hover:bg-yellow-500"
           >
             Start the Assessment
             <ArrowRight />
@@ -99,7 +99,7 @@ export default function Home() {
 
         </div>
 
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-white">
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-black">
           <ChevronDown size={40} />
         </div>
 
@@ -142,7 +142,7 @@ export default function Home() {
                 className="text-[#8A5A00]"
               />
 
-              <h3 className="mt-6 text-2xl font-bold">
+              <h3 className="mt-6 text-2xl font-bold text-black">
                 Five Scenarios
               </h3>
 
@@ -160,7 +160,7 @@ export default function Home() {
                 className="text-[#8A5A00]"
               />
 
-              <h3 className="mt-6 text-2xl font-bold">
+              <h3 className="mt-6 text-2xl font-bold text-black">
                 Historic Comparison
               </h3>
 
@@ -178,7 +178,7 @@ export default function Home() {
                 className="text-[#8A5A00]"
               />
 
-              <h3 className="mt-6 text-2xl font-bold">
+              <h3 className="mt-6 text-2xl font-bold text-black">
                 Personalized Report
               </h3>
 

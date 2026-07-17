@@ -22,7 +22,7 @@ export default function FinalCTA() {
 
       {/* Content */}
 
-      <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center px-6 text-center text-white">
+      <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center px-6 text-center text-black">
 
         <p className="uppercase tracking-[0.45em] text-yellow-300">
           Your Journey Begins Here
@@ -36,14 +36,14 @@ export default function FinalCTA() {
           Inside You?
         </h2>
 
-        <p className="mt-8 max-w-2xl text-lg leading-9 text-white/95">
+        <p className="mt-8 max-w-2xl text-lg leading-9 text-black/95">
           Complete five leadership scenarios and receive your personalized
           compatibility report inspired by India's greatest leaders.
         </p>
 
         <Link
           href="/instructions"
-          className="mt-12 inline-flex items-center gap-3 rounded-full bg-yellow-600 px-10 py-4 text-lg font-semibold text-white transition duration-300 hover:scale-105 hover:bg-yellow-500"
+          className="mt-12 inline-flex items-center gap-3 rounded-full bg-yellow-600 px-10 py-4 text-lg font-semibold text-black transition duration-300 hover:scale-105 hover:bg-yellow-500"
         >
           Start Assessment
 

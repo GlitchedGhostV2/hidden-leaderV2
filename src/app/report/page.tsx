@@ -107,7 +107,7 @@ export default function ReportPage() {
 
         {/* Hero */}
 
-        <section className="bg-[#2E2015] px-6 py-20 text-white">
+        <section className="bg-[#2E2015] px-6 py-20 text-black">
 
           <div className="mx-auto flex max-w-6xl flex-col items-center gap-10 md:flex-row">
 
@@ -148,7 +148,7 @@ export default function ReportPage() {
     {leaderInfo.title}
   </h3>
 
-  <p className="mt-3 leading-8 text-white/95">
+  <p className="mt-3 leading-8 text-black/95">
     {leaderInfo.description}
   </p>
 
@@ -271,7 +271,7 @@ export default function ReportPage() {
 
 <section className="mx-auto max-w-6xl px-6 pb-20">
 
-  <div className="rounded-3xl bg-[#2E2015] p-10 text-white shadow-xl">
+  <div className="rounded-3xl bg-[#2E2015] p-10 text-black shadow-xl">
 
     <h2 className="mb-8 text-3xl font-bold">
       Your Top Leadership Traits
@@ -350,7 +350,7 @@ export default function ReportPage() {
 
           <button
             onClick={downloadPDF}
-            className="flex items-center gap-2 rounded-xl bg-yellow-600 px-8 py-4 text-white transition hover:bg-yellow-700"
+            className="flex items-center gap-2 rounded-xl bg-yellow-600 px-8 py-4 text-black transition hover:bg-yellow-700"
           >
             <Download size={20} />
             Download PDF

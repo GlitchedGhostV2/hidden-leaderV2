@@ -89,7 +89,7 @@ function previous() {
             <button
               onClick={next}
               disabled={!answers[question.id]}
-              className="flex items-center gap-2 rounded-xl bg-yellow-600 px-6 py-3 font-semibold text-white transition hover:bg-yellow-700 disabled:cursor-not-allowed disabled:opacity-40"
+              className="flex items-center gap-2 rounded-xl bg-yellow-600 px-6 py-3 font-semibold text-black transition hover:bg-yellow-700 disabled:cursor-not-allowed disabled:opacity-40"
             >
               {current === questions.length - 1
                 ? "Generate Report"

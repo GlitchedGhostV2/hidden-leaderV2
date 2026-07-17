@@ -15,7 +15,7 @@ export default function Navbar() {
           Hidden Leader
         </Link>
 
-        <div className="hidden gap-10 text-white md:flex">
+        <div className="hidden gap-10 text-black md:flex">
 
           <a href="#about" className="transition hover:text-yellow-300">
             About
@@ -33,7 +33,7 @@ export default function Navbar() {
 
         <Link
           href="/instructions"
-          className="rounded-full bg-yellow-600 px-6 py-3 font-semibold text-white transition hover:bg-yellow-500"
+          className="rounded-full bg-yellow-600 px-6 py-3 font-semibold text-black transition hover:bg-yellow-500"
         >
           Start
         </Link>

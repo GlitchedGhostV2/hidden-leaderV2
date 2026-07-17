@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-[#24170C] py-10 text-center text-white/95">
+    <footer className="bg-[#24170C] py-10 text-center text-black/95">
 
       <h2 className="text-2xl font-bold tracking-wide">
         The Hidden Leader Inside You

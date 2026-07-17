@@ -38,7 +38,7 @@ export default function Instructions() {
             Welcome
           </h1>
 
-          <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-9 text-white/95">
+          <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-9 text-black/95">
             Before beginning your journey, please read the following
             instructions carefully.
           </p>
@@ -47,7 +47,7 @@ export default function Instructions() {
 
             {/* Card */}
 
-            <div className="rounded-3xl bg-white/10 p-8 text-white">
+            <div className="rounded-3xl bg-white/10 p-8 text-black">
 
               <Clock3
                 size={42}
@@ -67,7 +67,7 @@ export default function Instructions() {
 
             {/* Card */}
 
-            <div className="rounded-3xl bg-white/10 p-8 text-white">
+            <div className="rounded-3xl bg-white/10 p-8 text-black">
 
               <ScrollText
                 size={42}
@@ -138,7 +138,7 @@ export default function Instructions() {
 
             <Link
               href="/assessment"
-              className="inline-flex items-center gap-3 rounded-full bg-yellow-600 px-10 py-4 text-lg font-semibold text-white transition hover:scale-105 hover:bg-yellow-500"
+              className="inline-flex items-center gap-3 rounded-full bg-yellow-600 px-10 py-4 text-lg font-semibold text-black transition hover:scale-105 hover:bg-yellow-500"
             >
               Begin Assessment
 

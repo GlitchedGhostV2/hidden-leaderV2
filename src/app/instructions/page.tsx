@@ -94,7 +94,7 @@ export default function Instructions() {
                 className="text-yellow-300"
               />
 
-              <h3 className="mt-5 text-2xl font-bold">
+              <h3 className="mt-5 text-2xl font-bold text-black">
                 Private
               </h3>
 
@@ -119,14 +119,14 @@ export default function Instructions() {
 
               <User
                 size={22}
-                className="absolute left-5 top-1/2 -translate-y-1/2 text-[#2B2118]500"
+                className="absolute left-5 top-1/2 -translate-y-1/2 text-black"
               />
 
               <input
-                type="text"
-                placeholder="Your Name"
-                className="w-full rounded-full border border-yellow-500/30 bg-white px-14 py-5 text-lg outline-none focus:border-yellow-500"
-              />
+  type="text"
+  placeholder="Your Name"
+  className="w-full rounded-full border border-yellow-500/30 bg-white px-14 py-5 text-lg text-black placeholder:text-gray-500 outline-none focus:border-yellow-500"
+/>
 
             </div>
 

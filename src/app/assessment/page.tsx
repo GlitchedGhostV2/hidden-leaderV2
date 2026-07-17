@@ -47,12 +47,6 @@ function previous() {
     setCurrent((prev) => prev - 1);
   }
 }
-  function previous() {
-    if (current > 0) {
-      setCurrent((prev) => prev - 1);
-    }
-  }
-
   const progress = ((current + 1) / questions.length) * 100;
 
   return (

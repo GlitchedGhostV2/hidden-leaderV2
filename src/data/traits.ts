@@ -17,7 +17,7 @@ export interface LeaderProfile {
 export const leaders: LeaderProfile[] = [
   {
     name: "Dr. A.P.J. Abdul Kalam",
-    image: "/leaders/kalam.jpg",
+    image: "/images/leaders/apj.jpg",
     traits: {
       vision: 10,
       strategy: 7,
@@ -32,7 +32,7 @@ export const leaders: LeaderProfile[] = [
 
   {
     name: "Chanakya",
-    image: "/leaders/chanakya.jpg",
+    image: "/images/leaders/chanakya.jpg",
     traits: {
       vision: 9,
       strategy: 10,
@@ -47,7 +47,7 @@ export const leaders: LeaderProfile[] = [
 
   {
     name: "Ashoka Maurya",
-    image: "/leaders/ashoka.jpg",
+    image: "/images/leaders/ashoka.jpg",
     traits: {
       vision: 9,
       strategy: 8,
@@ -62,7 +62,7 @@ export const leaders: LeaderProfile[] = [
 
   {
     name: "Mahatma Gandhi",
-    image: "/leaders/gandhi.jpg",
+    image: "/images/leaders/gandhi.jpg",
     traits: {
       vision: 9,
       strategy: 8,
@@ -77,7 +77,7 @@ export const leaders: LeaderProfile[] = [
 
   {
     name: "Chhatrapati Shivaji Maharaj",
-    image: "/leaders/shivaji.jpg",
+    image: "/images/leaders/shivaji.jpg",
     traits: {
       vision: 9,
       strategy: 10,
@@ -92,7 +92,7 @@ export const leaders: LeaderProfile[] = [
 
   {
     name: "Rani Lakshmibai",
-    image: "/leaders/lakshmibai.jpg",
+    image: "/images/leaders/lakshmibai.jpg",
     traits: {
       vision: 8,
       strategy: 7,
@@ -107,7 +107,7 @@ export const leaders: LeaderProfile[] = [
 
   {
     name: "Dr. B.R. Ambedkar",
-    image: "/leaders/ambedkar.jpg",
+    image: "/images/leaders/ambedkar.jpg",
     traits: {
       vision: 9,
       strategy: 8,
@@ -122,7 +122,7 @@ export const leaders: LeaderProfile[] = [
 
   {
     name: "Swami Vivekananda",
-    image: "/leaders/vivekananda.jpg",
+    image: "/images/leaders/vivekananda.jpg",
     traits: {
       vision: 10,
       strategy: 7,
@@ -137,7 +137,7 @@ export const leaders: LeaderProfile[] = [
 
   {
     name: "Sardar Vallabhbhai Patel",
-    image: "/leaders/patel.jpg",
+    image: "/images/leaders/patel.jpg",
     traits: {
       vision: 8,
       strategy: 9,
@@ -152,7 +152,7 @@ export const leaders: LeaderProfile[] = [
 
   {
     name: "Vikram Sarabhai",
-    image: "/leaders/sarabhai.jpg",
+    image: "/images/leaders/sarabhai.jpg",
     traits: {
       vision: 10,
       strategy: 8,

@@ -67,7 +67,7 @@ export default function Instructions() {
                 className="text-yellow-300"
               />
 
-              <h3 className="mt-5 text-2xl font-bold">
+              <h3 className="mt-5 text-2xl font-bold text-[#F5D98B]">
                 5 Minutes
               </h3>
 
@@ -87,7 +87,7 @@ export default function Instructions() {
                 className="text-yellow-300"
               />
 
-              <h3 className="mt-5 text-2xl font-bold">
+              <h3 className="mt-5 text-2xl font-bold text-[#F5D98B]">
                 Answer Honestly
               </h3>
 
@@ -107,7 +107,7 @@ export default function Instructions() {
                 className="text-yellow-300"
               />
 
-              <h3 className="mt-5 text-2xl font-bold text-black">
+              <h3 className="mt-5 text-2xl font-bold text-[#F5D98B]">
                 Private
               </h3>
 

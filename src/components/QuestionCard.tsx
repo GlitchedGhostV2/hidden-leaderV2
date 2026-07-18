@@ -28,7 +28,7 @@ export default function QuestionCard({
           <button
             key={option.id}
             onClick={() => onSelect(option.id)}
-            className={`w-full rounded-2xl border p-6 text-left transition ${
+            className={`w-full rounded-2xl border p-6 text-left text-black transition ${
               selected === option.id
                 ? "border-yellow-600 bg-yellow-100"
                 : "border-gray-200 bg-white hover:border-yellow-500"

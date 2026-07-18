@@ -228,9 +228,9 @@ export default function Home() {
 
                   <div className="w-[45%] rounded-2xl bg-white p-6 shadow-xl">
 
-                    <h3 className="text-xl font-extrabold">
-                      {leader}
-                    </h3>
+                    <h3 className="text-xl font-extrabold text-black">
+  {leader}
+</h3>
 
                   </div>
 

@@ -41,7 +41,7 @@ export default function ReportPreview() {
 
               <Medal className="text-[#8A5A00]" size={34} />
 
-              <h3 className="text-2xl font-bold">
+              <h3 className="text-2xl font-bold text-black">
                 Sample Report
               </h3>
 
@@ -53,7 +53,7 @@ export default function ReportPreview() {
 
                 <div className="flex justify-between">
 
-                  <span>Dr. A.P.J. Abdul Kalam</span>
+                  <span className="text-black">Dr. A.P.J. Abdul Kalam</span>
 
                   <span>92%</span>
 
@@ -71,7 +71,7 @@ export default function ReportPreview() {
 
                 <div className="flex justify-between">
 
-                  <span>Swami Vivekananda</span>
+                  <span className="text-black">Swami Vivekananda</span>
 
                   <span>88%</span>
 
@@ -89,7 +89,7 @@ export default function ReportPreview() {
 
                 <div className="flex justify-between">
 
-                  <span>Vikram Sarabhai</span>
+                  <span className="text-black">Vikram Sarabhai</span>
 
                   <span>84%</span>
 
@@ -115,7 +115,7 @@ export default function ReportPreview() {
 
               <BarChart3 className="text-[#8A5A00]" size={36} />
 
-              <h3 className="mt-5 text-2xl font-bold">
+              <h3 className="mt-5 text-2xl font-bold text-black">
                 Compatibility Analysis
               </h3>
 
@@ -129,7 +129,7 @@ export default function ReportPreview() {
 
               <Sparkles className="text-[#8A5A00]" size={36} />
 
-              <h3 className="mt-5 text-2xl font-bold">
+              <h3 className="mt-5 text-2xl font-bold text-black">
                 Leadership Insights
               </h3>
 
@@ -143,7 +143,7 @@ export default function ReportPreview() {
 
               <FileDown className="text-[#8A5A00]" size={36} />
 
-              <h3 className="mt-5 text-2xl font-bold">
+              <h3 className="mt-5 text-2xl font-bold text-black">
                 Download PDF
               </h3>
 

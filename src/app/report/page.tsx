@@ -183,9 +183,9 @@ export default function ReportPage() {
 
                   <div className="mb-2 flex justify-between">
 
-                    <span className="font-semibold">
-                      {leader.name}
-                    </span>
+                    <span className="font-semibold text-black">
+  {leader.name}
+</span>
 
                     <span className="font-bold text-[#8A5A00]">
                       {leader.compatibility}%
@@ -219,9 +219,9 @@ export default function ReportPage() {
 
   <div className="rounded-3xl bg-white p-10 shadow-xl">
 
-    <h2 className="mb-8 text-3xl font-bold text-[#2B2118]">
-      Leadership Trait Profile
-    </h2>
+    <h2 className="mb-8 text-3xl font-bold text-black">
+  Leadership Trait Profile
+</h2>
 
     <p className="mb-10 text-[#4B3A2A]">
       These scores represent the leadership qualities reflected in your responses.
@@ -237,7 +237,7 @@ export default function ReportPage() {
 
           <div className="mb-2 flex justify-between">
 
-            <span className="font-semibold capitalize">
+            <span className="font-semibold capitalize text-black">
   {traitNames[trait] || trait}
 </span>
 

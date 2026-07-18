@@ -51,7 +51,7 @@ export default function Instructions() {
             Welcome
           </h1>
 
-          <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-9 text-black/95">
+          <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-9 text-white/90">
             Before beginning your journey, please read the following
             instructions carefully.
           </p>
@@ -67,11 +67,11 @@ export default function Instructions() {
                 className="text-yellow-300"
               />
 
-              <h3 className="mt-5 text-2xl font-bold text-[#F5D98B]">
-                5 Minutes
-              </h3>
+              <h3 className="mt-5 font-serif text-3xl font-semibold tracking-wide text-[#F8E7C0]">
+  5 Minutes
+</h3>
 
-              <p className="mt-4 leading-8 text-[#2B2118]">
+              <p className="mt-4 text-lg font-light leading-8 tracking-wide text-[#E2D5C3]">
                 The assessment contains only five questions and takes
                 less than five minutes.
               </p>
@@ -87,11 +87,11 @@ export default function Instructions() {
                 className="text-yellow-300"
               />
 
-              <h3 className="mt-5 text-2xl font-bold text-[#F5D98B]">
-                Answer Honestly
-              </h3>
+              <h3 className="mt-5 font-serif text-3xl font-semibold tracking-wide text-[#F8E7C0]">
+  Answer Honestly
+</h3>
 
-              <p className="mt-4 leading-8 text-[#2B2118]">
+              <p className="mt-4 text-lg font-light leading-8 tracking-wide text-[#E2D5C3]">
                 There are no right or wrong answers.
                 Choose the option that best represents your decision.
               </p>
@@ -107,11 +107,11 @@ export default function Instructions() {
                 className="text-yellow-300"
               />
 
-              <h3 className="mt-5 text-2xl font-bold text-[#F5D98B]">
-                Private
-              </h3>
+              <h3 className="mt-5 font-serif text-3xl font-semibold tracking-wide text-[#F8E7C0]">
+  Private
+</h3>
 
-              <p className="mt-4 leading-8 text-[#2B2118]">
+              <p className="mt-4 text-lg font-light leading-8 tracking-wide text-[#E2D5C3]">
                 Your responses are not stored.
                 They are used only to generate your report.
               </p>

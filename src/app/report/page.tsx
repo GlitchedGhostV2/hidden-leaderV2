@@ -351,58 +351,70 @@ export default function ReportPage() {
 
         {/* Hero */}
 
-        <section className="bg-[#2E2015] px-6 py-20 text-black">
+<section className="bg-[#2E2015] px-6 py-20 text-[#FFF4D6]">
 
-          <div className="mx-auto flex max-w-6xl flex-col items-center gap-10 md:flex-row">
+  <div className="mx-auto flex max-w-6xl flex-col items-center gap-12 md:flex-row">
 
-            <div className="relative h-80 w-64 overflow-hidden rounded-3xl border-4 border-yellow-500">
+    {/* Leader Image */}
 
-              <Image
-                src={topLeader.image}
-                alt={topLeader.name}
-                fill
-                className="object-cover"
-              />
+    <div className="relative h-80 w-64 shrink-0 overflow-hidden rounded-3xl border-4 border-yellow-500 shadow-2xl">
 
-            </div>
+      <Image
+        src={topLeader.image}
+        alt={topLeader.name}
+        fill
+        className="object-cover"
+      />
 
-            <div className="flex-1">
+    </div>
 
-              <p className="uppercase tracking-[0.4em] text-yellow-300">
-                Your Leadership Match
-              </p>
+    {/* Leader Information */}
 
-              <h1 className="mt-4 text-5xl font-bold">
-                {topLeader.name}
-              </h1>
+    <div className="flex-1">
 
-              <div className="mt-6 flex items-center gap-3">
+      <p className="text-sm font-semibold uppercase tracking-[0.45em] text-yellow-400 md:text-base">
+        Your Leadership Match
+      </p>
 
-                <Award className="text-yellow-400" />
+      <h1 className="mt-5 font-serif text-5xl font-semibold leading-tight tracking-tight text-[#FFF4D6] md:text-6xl">
+        {topLeader.name}
+      </h1>
 
-                <span className="text-3xl font-bold text-yellow-300">
-                  {topLeader.compatibility}% Compatible
-                </span>
+      <div className="mt-7 flex items-center gap-4">
 
-              </div>
+        <Award
+          size={34}
+          strokeWidth={1.8}
+          className="text-yellow-400"
+        />
 
-              <div className="mt-8 rounded-2xl bg-white/10 p-6 backdrop-blur">
+        <span className="font-serif text-3xl font-semibold text-yellow-400 md:text-4xl">
+          {topLeader.compatibility}% Compatible
+        </span>
 
-  <h3 className="text-xl font-extrabold text-yellow-300">
-    {leaderInfo.title}
-  </h3>
+      </div>
 
-  <p className="mt-3 leading-8 text-black/95">
-    {leaderInfo.description}
-  </p>
+      {/* Leader Description Card */}
 
-</div>
-            </div>
+      <div className="mt-10 rounded-2xl border border-yellow-500/20 bg-white/[0.08] p-7 backdrop-blur-md">
 
-          </div>
+        <h3 className="font-serif text-2xl font-semibold tracking-wide text-[#F5C84C] md:text-3xl">
+          {leaderInfo.title}
+        </h3>
 
-        </section>
+        <div className="my-4 h-px w-full bg-gradient-to-r from-yellow-500/50 via-yellow-500/20 to-transparent" />
 
+        <p className="text-base font-normal leading-8 tracking-wide text-[#E8DCCB] md:text-lg">
+          {leaderInfo.description}
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
         {/* Compatibility */}
 
         <section className="mx-auto max-w-6xl px-6 py-20">

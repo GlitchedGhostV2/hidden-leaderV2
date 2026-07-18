@@ -17,26 +17,19 @@ export default function Navbar() {
 
         <div className="hidden gap-10 text-black md:flex">
 
-          <a href="#about" className="transition hover:text-yellow-300">
+          <a href="#about" className="font-bold text-[#F8E7C0] transition-colors duration-300 hover:text-yellow-400">
             About
           </a>
 
-          <a href="#leaders" className="transition hover:text-yellow-300">
+          <a href="#leaders" className="font-bold text-[#F8E7C0] transition-colors duration-300 hover:text-yellow-400">
             Leaders
           </a>
 
-          <a href="#journey" className="transition hover:text-yellow-300">
+          <a href="#journey" className="font-bold text-[#F8E7C0] transition-colors duration-300 hover:text-yellow-400">
             Journey
           </a>
 
         </div>
-
-        <Link
-          href="/instructions"
-          className="rounded-full bg-yellow-600 px-6 py-3 font-semibold text-black transition hover:bg-yellow-500"
-        >
-          Start
-        </Link>
 
       </div>
 

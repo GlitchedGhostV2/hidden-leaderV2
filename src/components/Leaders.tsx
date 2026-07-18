@@ -47,7 +47,7 @@ const leaders = [
 
 export default function Leaders() {
   return (
-    <section className="bg-[#EFE3C7] py-24">
+    <section id="leaders" className="scroll-mt-20 bg-[#EFE3C7] py-24">
 
       <div className="mx-auto max-w-7xl px-6">
 

@@ -64,14 +64,6 @@ export default function Home() {
             immersive scenarios inspired by India's greatest leaders.
           </p>
 
-          <Link
-            href="/instructions"
-            className="mt-12 inline-flex items-center gap-3 rounded-full bg-yellow-600 px-8 py-4 text-lg font-semibold text-black transition hover:scale-105 hover:bg-yellow-500"
-          >
-            Start the Assessment
-            <ArrowRight />
-          </Link>
-
           <div className="mt-16 grid grid-cols-3 gap-6">
 
             <div>
@@ -111,9 +103,9 @@ export default function Home() {
         ❖
       </div>
 
-      {/* ================= ABOUT ================= */}
+{/* ================= ABOUT ================= */}
 
-      <section className="px-6 pb-32">
+<section id="about" className="scroll-mt-20 px-6 pb-32">
 
         <div className="mx-auto max-w-6xl">
 
@@ -195,9 +187,9 @@ export default function Home() {
 
       </section>
 
-      {/* ================= TIMELINE ================= */}
+{/* ================= TIMELINE ================= */}
 
-      <section className="bg-[#EFE3C7] px-6 py-28">
+<section id="journey" className="scroll-mt-20 bg-[#EFE3C7] px-6 py-28">
 
         <div className="mx-auto max-w-5xl">
 

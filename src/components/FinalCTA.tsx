@@ -16,19 +16,23 @@ export default function FinalCTA() {
         }}
       />
 
-      {/* Overlay */}
+      {/* Dark Overlay */}
 
       <div className="absolute inset-0 bg-black/75" />
 
       {/* Content */}
 
-      <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center px-6 text-center text-black">
+      <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center px-6 text-center">
+
+        {/* Small Heading */}
 
         <p className="uppercase tracking-[0.45em] text-yellow-300">
           Your Journey Begins Here
         </p>
 
-        <h2 className="mt-6 text-5xl font-bold leading-tight md:text-6xl">
+        {/* Main Heading */}
+
+        <h2 className="mt-6 text-5xl font-bold leading-tight text-[#FFF4D6] md:text-6xl">
           Ready to Discover
           <br />
           The Hidden Leader
@@ -36,10 +40,14 @@ export default function FinalCTA() {
           Inside You?
         </h2>
 
-        <p className="mt-8 max-w-2xl text-lg leading-9 text-black/95">
+        {/* Description */}
+
+        <p className="mt-8 max-w-2xl text-lg leading-9 text-[#E8DCCB]">
           Complete five leadership scenarios and receive your personalized
           compatibility report inspired by India's greatest leaders.
         </p>
+
+        {/* Start Button */}
 
         <Link
           href="/instructions"

@@ -120,10 +120,16 @@ export default function ReportPage() {
       heightLeft -= pageHeight;
     }
 
-    pdf.save("Hidden-Leader-Report.pdf");
+        pdf.save("Hidden-Leader-Report.pdf");
+
   } catch (error) {
     console.error("PDF generation failed:", error);
-    alert("Unable to download the report.");
+
+    alert(
+      error instanceof Error
+        ? `PDF Error: ${error.message}`
+        : "Unknown PDF generation error"
+    );
   }
 }
   const traitNames: Record<string, string> = {

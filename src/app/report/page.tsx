@@ -59,15 +59,22 @@ export default function ReportPage() {
   const growth = getGrowthAreas(report.traits);
 
   async function downloadPDF() {
-    if (!reportRef.current) return;
+  if (!reportRef.current) {
+    alert("Report could not be found.");
+    return;
+  }
 
-    const canvas = await html2canvas(reportRef.current, {
+  try {
+    const element = reportRef.current;
+
+    const canvas = await html2canvas(element, {
       scale: 2,
       useCORS: true,
       backgroundColor: "#F8F4EA",
+      logging: false,
     });
 
-    const imgData = canvas.toDataURL("image/png");
+    const imgData = canvas.toDataURL("image/jpeg", 0.95);
 
     const pdf = new jsPDF({
       orientation: "portrait",
@@ -76,21 +83,49 @@ export default function ReportPage() {
     });
 
     const pdfWidth = pdf.internal.pageSize.getWidth();
+    const pageHeight = pdf.internal.pageSize.getHeight();
 
-    const pdfHeight =
-      (canvas.height * pdfWidth) / canvas.width;
+    const imgWidth = pdfWidth;
+    const imgHeight =
+      (canvas.height * imgWidth) / canvas.width;
+
+    let heightLeft = imgHeight;
+    let position = 0;
 
     pdf.addImage(
       imgData,
-      "PNG",
+      "JPEG",
       0,
-      0,
-      pdfWidth,
-      pdfHeight
+      position,
+      imgWidth,
+      imgHeight
     );
 
+    heightLeft -= pageHeight;
+
+    while (heightLeft > 0) {
+      position = heightLeft - imgHeight;
+
+      pdf.addPage();
+
+      pdf.addImage(
+        imgData,
+        "JPEG",
+        0,
+        position,
+        imgWidth,
+        imgHeight
+      );
+
+      heightLeft -= pageHeight;
+    }
+
     pdf.save("Hidden-Leader-Report.pdf");
+  } catch (error) {
+    console.error("PDF generation failed:", error);
+    alert("Unable to download the report.");
   }
+}
   const traitNames: Record<string, string> = {
   vision: "Vision",
   strategy: "Strategic Thinking",
@@ -358,7 +393,7 @@ export default function ReportPage() {
 
           <Link
             href="/"
-            className="flex items-center gap-2 rounded-xl border border-gray-300 bg-white px-8 py-4 transition hover:bg-gray-100"
+            className="flex items-center gap-2 rounded-xl border border-gray-300 bg-white px-8 py-4 transition hover:bg-gray-100 text-black"
           >
             <RotateCcw size={20} />
             Take Again

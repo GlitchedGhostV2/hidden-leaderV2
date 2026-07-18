@@ -1,10 +1,9 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
 
 import {
@@ -34,20 +33,25 @@ interface ReportData {
 
 export default function ReportPage() {
   const router = useRouter();
-  const reportRef = useRef<HTMLDivElement>(null);
 
   const [report, setReport] = useState<ReportData | null>(null);
+  const [userName, setUserName] = useState("Leader");
 
   useEffect(() => {
-    const stored = sessionStorage.getItem("leader-results");
+  const stored = sessionStorage.getItem("leader-results");
+  const storedName = sessionStorage.getItem("user-name");
 
-    if (!stored) {
-      router.replace("/");
-      return;
-    }
+  if (!stored) {
+    router.replace("/");
+    return;
+  }
 
-    setReport(JSON.parse(stored));
-  }, [router]);
+  if (storedName) {
+    setUserName(storedName);
+  }
+
+  setReport(JSON.parse(stored));
+}, [router]);
 
   if (!report) return null;
 
@@ -57,73 +61,272 @@ export default function ReportPage() {
 
   const strengths = getStrengths(report.traits);
   const growth = getGrowthAreas(report.traits);
-
   async function downloadPDF() {
-  if (!reportRef.current) {
-    alert("Report could not be found.");
-    return;
-  }
-
   try {
-    const element = reportRef.current;
-
-    const canvas = await html2canvas(element, {
-      scale: 2,
-      useCORS: true,
-      backgroundColor: "#F8F4EA",
-      logging: false,
-    });
-
-    const imgData = canvas.toDataURL("image/jpeg", 0.95);
-
     const pdf = new jsPDF({
       orientation: "portrait",
       unit: "mm",
       format: "a4",
     });
 
-    const pdfWidth = pdf.internal.pageSize.getWidth();
+    const pageWidth = pdf.internal.pageSize.getWidth();
     const pageHeight = pdf.internal.pageSize.getHeight();
 
-    const imgWidth = pdfWidth;
-    const imgHeight =
-      (canvas.height * imgWidth) / canvas.width;
+    // ==========================================
+    // PAGE 1 - LEADERSHIP CERTIFICATE
+    // ==========================================
 
-    let heightLeft = imgHeight;
-    let position = 0;
+    // Background
+    pdf.setFillColor(248, 244, 234);
+    pdf.rect(0, 0, pageWidth, pageHeight, "F");
 
-    pdf.addImage(
-      imgData,
-      "JPEG",
-      0,
-      position,
-      imgWidth,
-      imgHeight
+    // Outer certificate border
+    pdf.setDrawColor(138, 90, 0);
+    pdf.setLineWidth(2);
+    pdf.rect(10, 10, pageWidth - 20, pageHeight - 20);
+
+    // Inner certificate border
+    pdf.setLineWidth(0.5);
+    pdf.rect(15, 15, pageWidth - 30, pageHeight - 30);
+
+    // Certificate heading
+    pdf.setTextColor(43, 33, 24);
+    pdf.setFont("helvetica", "bold");
+    pdf.setFontSize(30);
+
+    pdf.text(
+      "Certificate of Leadership",
+      pageWidth / 2,
+      55,
+      { align: "center" }
     );
 
-    heightLeft -= pageHeight;
+    // Assessment title
+    pdf.setTextColor(138, 90, 0);
+    pdf.setFontSize(14);
 
-    while (heightLeft > 0) {
-      position = heightLeft - imgHeight;
+    pdf.text(
+      "THE HIDDEN LEADER",
+      pageWidth / 2,
+      72,
+      { align: "center" }
+    );
 
-      pdf.addPage();
+    // Congratulations
+    pdf.setTextColor(43, 33, 24);
+    pdf.setFont("helvetica", "normal");
+    pdf.setFontSize(16);
 
-      pdf.addImage(
-        imgData,
-        "JPEG",
-        0,
-        position,
-        imgWidth,
-        imgHeight
+    pdf.text(
+      "Congratulations",
+      pageWidth / 2,
+      105,
+      { align: "center" }
+    );
+
+    // User Name
+    pdf.setFont("helvetica", "bold");
+    pdf.setFontSize(28);
+
+    pdf.text(
+      userName,
+      pageWidth / 2,
+      125,
+      { align: "center" }
+    );
+
+    // Match description
+    pdf.setFont("helvetica", "normal");
+    pdf.setFontSize(15);
+
+    pdf.text(
+      "Your leadership qualities most closely align with",
+      pageWidth / 2,
+      150,
+      { align: "center" }
+    );
+
+    // Leader Name
+    pdf.setTextColor(138, 90, 0);
+    pdf.setFont("helvetica", "bold");
+    pdf.setFontSize(24);
+
+    pdf.text(
+      topLeader.name,
+      pageWidth / 2,
+      175,
+      {
+        align: "center",
+        maxWidth: 175,
+      }
+    );
+
+    // Compatibility
+    pdf.setFontSize(20);
+
+    pdf.text(
+      `${topLeader.compatibility}% Compatible`,
+      pageWidth / 2,
+      200,
+      { align: "center" }
+    );
+
+    // Certificate message
+    pdf.setTextColor(43, 33, 24);
+    pdf.setFont("helvetica", "italic");
+    pdf.setFontSize(12);
+
+    pdf.text(
+      "Recognizing your unique leadership qualities, strengths, and potential.",
+      pageWidth / 2,
+      230,
+      {
+        align: "center",
+        maxWidth: 165,
+      }
+    );
+
+    // ==========================================
+    // PAGE 2 - LEADER PROFILE
+    // ==========================================
+
+    pdf.addPage();
+
+    // Background
+    pdf.setFillColor(248, 244, 234);
+    pdf.rect(0, 0, pageWidth, pageHeight, "F");
+
+    // Page border
+    pdf.setDrawColor(138, 90, 0);
+    pdf.setLineWidth(1);
+    pdf.rect(10, 10, pageWidth - 20, pageHeight - 20);
+
+    // Heading
+    pdf.setTextColor(43, 33, 24);
+    pdf.setFont("helvetica", "bold");
+    pdf.setFontSize(26);
+
+    pdf.text(
+      "Your Leadership Match",
+      pageWidth / 2,
+      30,
+      { align: "center" }
+    );
+
+    // ==========================================
+    // LEADER IMAGE
+    // ==========================================
+
+    try {
+      const response = await fetch(topLeader.image);
+
+      const blob = await response.blob();
+
+      const imageData = await new Promise<string>(
+        (resolve, reject) => {
+          const reader = new FileReader();
+
+          reader.onloadend = () => {
+            resolve(reader.result as string);
+          };
+
+          reader.onerror = reject;
+
+          reader.readAsDataURL(blob);
+        }
       );
 
-      heightLeft -= pageHeight;
+      pdf.addImage(
+        imageData,
+        "JPEG",
+        65,
+        42,
+        80,
+        105
+      );
+
+    } catch (imageError) {
+      console.error(
+        "Could not load leader image:",
+        imageError
+      );
     }
 
-        pdf.save("Hidden-Leader-Report.pdf");
+    // Leader Name
+    pdf.setTextColor(43, 33, 24);
+    pdf.setFont("helvetica", "bold");
+    pdf.setFontSize(24);
+
+    pdf.text(
+      topLeader.name,
+      pageWidth / 2,
+      165,
+      {
+        align: "center",
+        maxWidth: 180,
+      }
+    );
+
+    // Leader Title
+    pdf.setTextColor(138, 90, 0);
+    pdf.setFontSize(16);
+
+    pdf.text(
+      leaderInfo.title,
+      pageWidth / 2,
+      180,
+      {
+        align: "center",
+        maxWidth: 175,
+      }
+    );
+
+    // Leader Description / Quote
+    pdf.setTextColor(43, 33, 24);
+    pdf.setFont("helvetica", "normal");
+    pdf.setFontSize(12);
+
+    const descriptionLines = pdf.splitTextToSize(
+      leaderInfo.description,
+      160
+    );
+
+    pdf.text(
+      descriptionLines,
+      pageWidth / 2,
+      200,
+      {
+        align: "center",
+      }
+    );
+
+    // Compatibility
+    pdf.setTextColor(138, 90, 0);
+    pdf.setFont("helvetica", "bold");
+    pdf.setFontSize(17);
+
+    pdf.text(
+      `${topLeader.compatibility}% Leadership Compatibility`,
+      pageWidth / 2,
+      260,
+      {
+        align: "center",
+      }
+    );
+
+    // ==========================================
+    // DOWNLOAD PDF
+    // ==========================================
+
+    pdf.save(
+      `${userName}-Hidden-Leader-Certificate.pdf`
+    );
 
   } catch (error) {
-    console.error("PDF generation failed:", error);
+    console.error(
+      "PDF generation failed:",
+      error
+    );
 
     alert(
       error instanceof Error
@@ -144,7 +347,7 @@ export default function ReportPage() {
 };
   return (
     <main className="min-h-screen bg-[#F8F4EA]">
-      <div ref={reportRef}>
+      <div>
 
         {/* Hero */}
 

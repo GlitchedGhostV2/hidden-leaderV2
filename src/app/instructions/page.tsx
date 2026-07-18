@@ -1,6 +1,7 @@
 "use client";
 
-import Link from "next/link";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 import {
   Clock3,
   ScrollText,
@@ -10,6 +11,18 @@ import {
 } from "lucide-react";
 
 export default function Instructions() {
+    const [name, setName] = useState("");
+  const router = useRouter();
+
+  function startAssessment() {
+    if (!name.trim()) {
+      alert("Please enter your name.");
+      return;
+    }
+
+    sessionStorage.setItem("user-name", name.trim());
+    router.push("/assessment");
+  }
   return (
     <main className="relative min-h-screen overflow-hidden">
 
@@ -125,6 +138,8 @@ export default function Instructions() {
               <input
   type="text"
   placeholder="Your Name"
+  value={name}
+  onChange={(e) => setName(e.target.value)}
   className="w-full rounded-full border border-yellow-500/30 bg-white px-14 py-5 text-lg text-black placeholder:text-gray-500 outline-none focus:border-yellow-500"
 />
 
@@ -136,15 +151,14 @@ export default function Instructions() {
 
           <div className="mt-16 text-center">
 
-            <Link
-              href="/assessment"
-              className="inline-flex items-center gap-3 rounded-full bg-yellow-600 px-10 py-4 text-lg font-semibold text-black transition hover:scale-105 hover:bg-yellow-500"
-            >
-              Begin Assessment
+            <button
+  onClick={startAssessment}
+  className="inline-flex items-center gap-3 rounded-full bg-yellow-600 px-10 py-4 text-lg font-semibold text-black transition hover:scale-105 hover:bg-yellow-500"
+>
+  Begin Assessment
 
-              <ArrowRight />
-
-            </Link>
+  <ArrowRight />
+</button>
 
           </div>
 

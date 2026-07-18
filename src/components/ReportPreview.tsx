@@ -55,7 +55,7 @@ export default function ReportPreview() {
 
                   <span className="text-black">Dr. A.P.J. Abdul Kalam</span>
 
-                  <span>92%</span>
+                  <span className="text-black">92%</span>
 
                 </div>
 
@@ -73,7 +73,7 @@ export default function ReportPreview() {
 
                   <span className="text-black">Swami Vivekananda</span>
 
-                  <span>88%</span>
+                  <span className="text-black">88%</span>
 
                 </div>
 
@@ -91,7 +91,7 @@ export default function ReportPreview() {
 
                   <span className="text-black">Vikram Sarabhai</span>
 
-                  <span>84%</span>
+                  <span className="text-black">84%</span>
 
                 </div>
 

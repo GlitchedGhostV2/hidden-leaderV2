@@ -622,6 +622,29 @@ export default function ReportPage() {
 
         </div>
 
+              {/* Developer Credit */}
+
+<div className="mx-auto mt-10 flex max-w-md items-center justify-center gap-4 px-6">
+
+  <div className="h-px flex-1 bg-gradient-to-r from-transparent to-[#B8860B]/50" />
+
+  <div className="shrink-0 text-center">
+    <p className="text-sm tracking-wide text-[#6B5438]">
+      Developed by{" "}
+      <span className="font-semibold text-[#9A6700]">
+        Sheron Khoya
+      </span>
+    </p>
+
+    <p className="mt-1 text-xs tracking-[0.12em] text-[#8A7963]">
+      © 2026 Hidden Leader
+    </p>
+  </div>
+
+  <div className="h-px flex-1 bg-gradient-to-l from-transparent to-[#B8860B]/50" />
+
+</div>
+
       </section>
 
     </main>

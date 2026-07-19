@@ -124,6 +124,33 @@ export default function Instructions() {
 
           <div className="mx-auto mt-20 max-w-xl">
 
+            </div>
+
+{/* Developer Credit */}
+
+<div className="mx-auto mt-10 flex max-w-xl items-center justify-center gap-4">
+  <div className="h-px flex-1 bg-gradient-to-r from-transparent to-yellow-500/40" />
+
+  <div className="shrink-0 text-center">
+    <p className="text-sm tracking-wide text-[#E8DCCB]">
+      Developed by{" "}
+      <span className="font-semibold text-[#F5D98B]">
+        Sheron Khoya
+      </span>
+    </p>
+
+    <p className="mt-1 text-xs tracking-[0.15em] text-[#C9B896]">
+      © 2026 Hidden Leader
+    </p>
+  </div>
+
+  <div className="h-px flex-1 bg-gradient-to-l from-transparent to-yellow-500/40" />
+</div>
+
+{/* Name */}
+
+<div className="mx-auto mt-10 max-w-xl">
+
             <label className="mb-3 block text-lg text-white">
               Enter Your Name
             </label>

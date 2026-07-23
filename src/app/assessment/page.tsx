@@ -37,40 +37,7 @@ async function next() {
     "leader-results",
     JSON.stringify(results)
   );
-
-  // Get user's name
-  const userName =
-    sessionStorage.getItem("user-name") || "Unknown";
-
-  // Get top matched leader
-  const topLeader = results.rankings[0];
-
-  // Data that will be sent to Google Sheets
-  const recordData = {
-    name: userName,
-    topLeader: topLeader.name,
-    compatibility: topLeader.compatibility,
-    traits: results.traits,
-  };
-
-  try {
-    await fetch(
-      "https://script.google.com/macros/s/AKfycbwHuU_ztc9DTfZ-tTrZXMkmPMgc3EYYqdIswnBOrTiwEKhgYvFd30xjmKRRjWu9ZAXdCA/exec",
-      {
-        method: "POST",
-        body: JSON.stringify(recordData),
-      }
-    );
-
-    console.log("Assessment record saved.");
-
-  } catch (error) {
-    console.error(
-      "Could not save assessment record:",
-      error
-    );
-  }
-
+  
   // Continue to loading/report page
   router.push("/loading-report");
 }
